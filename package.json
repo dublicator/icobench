@@ -1,0 +1,35 @@
+{
+  "name": "icobench",
+  "version": "1.0.0",
+  "description": "ICObench Data API allows you to get various information and data from the platform including ICO listings, ratings, and stats.",
+  "homepage": "https://icobench.com/developers",
+  "contributors": [
+    {
+      "name": "Anton Kandybo",
+      "email": "dublicator@hotmail.com"
+    }
+  ],
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "repository": {
+    "url": "https://github.com/dublicator/icobench",
+    "type": "git"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "prepare": "npm run clean && tsc",
+    "start": "npm run prepare && node dist/index.js"
+  },
+  "author": "Anton Kandybo <dublicator@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "config": "^1.29.2"
+  },
+  "devDependencies": {
+    "@types/config": "0.0.33",
+    "@types/node": "^9.3.0",
+    "rimraf": "^2.6.2",
+    "typescript": "^2.6.2"
+  }
+}
