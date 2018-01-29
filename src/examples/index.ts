@@ -1,3 +1,4 @@
+// tslint:disable:no-console
 import * as config from "config";
 import { IcoBench } from "../icobench";
 
@@ -33,8 +34,10 @@ ib.trending()
 
 ib.ratings()
     .then((data) => {
-        console.log(data.length);
-        console.log(data[0]);
+        if (data && data.results) {
+            console.log(data.results.length);
+            console.log(data.results[0]);
+        }
     })
     .catch((e) => {
         console.error(e);
@@ -50,8 +53,10 @@ ib.profile("viberate")
 
 ib.people("expert", {page: 1})
     .then((data) => {
-        console.log(data.map((person) => console.log(person.name)));
-        console.log(data.length);
+        if (data && data.results) {
+            console.log(data.results.map((person) => console.log(person.name)));
+            console.log(data.results.length);
+        }
     })
     .catch((e) => {
         console.error(e);

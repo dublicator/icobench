@@ -29,19 +29,19 @@ export class IcoBench {
      * TReturns up to 12 ICOs per page with the amount of pages based on the search
      * criteria and the filters provided. The response provides some basic information about the ICOs.
      */
-    public async all(params: IIcoBenchFilterParams = {}): Promise<IIcoBenchIco[]> {
+    public async all(params: IIcoBenchFilterParams = {}): Promise<IIcoBenchResponse> {
         const url = `/icos/all`;
         const data: IIcoBenchResponse = await this.request(url, params);
-        return data.results ? data.results : [];
+        return data;
     }
 
     /**
      * returns up to 8 ICOs that are currently "Hot and Trending" on ICObench.
      */
-    public async trending(): Promise<IIcoBenchIco[]> {
+    public async trending(): Promise<IIcoBenchResponse> {
         const url = `/icos/trending`;
         const data: IIcoBenchResponse = await this.request(url);
-        return data.results ? data.results : [];
+        return data;
     }
 
     /**
@@ -49,17 +49,17 @@ export class IcoBench {
      */
     public async filters(): Promise<IIcoBenchFilters> {
         const url = "/icos/filters";
-        const data = await this.request(url);
+        const data: IIcoBenchFilters = await this.request(url);
         return data;
     }
 
     /**
      * Returns all ICOs that have received rating for either ICO profile or by experts along with their URLs and logos.
      */
-    public async ratings(): Promise<IIcoBenchIco[]> {
+    public async ratings(): Promise<IIcoBenchResponse> {
         const url = "/icos/ratings";
         const data: IIcoBenchResponse = await this.request(url);
-        return data.results ? data.results : [];
+        return data;
     }
 
     /**
@@ -68,7 +68,7 @@ export class IcoBench {
      */
     public async profile(ico: string|number): Promise<IIcoBenchProfile> {
         const url = `/ico/${ico}`;
-        const data = await this.request(url);
+        const data: IIcoBenchProfile = await this.request(url);
         return data;
     }
 
@@ -79,10 +79,10 @@ export class IcoBench {
     public async people(
         filter: "all"|"expert"|"registered" = "all",
         params: IIcoBenchPeopleFilter = {})
-    : Promise<IIcoBenchPerson[]> {
+    : Promise<IIcoBenchPeopleResponse> {
         const url = `/people/${filter}`;
         const data: IIcoBenchPeopleResponse = await this.request(url, params);
-        return data.results ? data.results : [];
+        return data;
     }
 
     /**
@@ -90,8 +90,8 @@ export class IcoBench {
      */
     public async stats(): Promise<IIcoBenchStats> {
         const url = `/other/stats`;
-        const response = await this.request(url);
-        return response;
+        const data: IIcoBenchStats = await this.request(url);
+        return data;
     }
 
     private async request(url: string, params = {}) {
