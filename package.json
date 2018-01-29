@@ -18,7 +18,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "prepare": "npm run clean && tsc",
-    "start": "npm run prepare && node dist/index.js"
+    "start": "npm run prepare && node dist/examples/index.js"
   },
   "author": "Anton Kandybo <dublicator@hotmail.com>",
   "license": "MIT",
