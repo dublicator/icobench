@@ -1,4 +1,6 @@
 # IcoBench
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdublicator%2Ficobench.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdublicator%2Ficobench?ref=badge_shield)
+
 
 IcoBench allows you to get various information and data from the platform including ICO listings, ratings, and stats.
 
@@ -41,3 +43,5 @@ See the [Terms & Conditions](TERMS.md) file for details
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdublicator%2Ficobench.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdublicator%2Ficobench?ref=badge_large)
