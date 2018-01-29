@@ -6,10 +6,10 @@ IcoBench allows you to get various information and data from the platform includ
 
 - [Getting Started](#getting-started)
 - [Installation](#installation)
+- [How can I get the access](#how-can-i-get-the-access)
 - [Resources](#resources)
-- [How can I get the access](#api-access)
 - [Authors](#authors)
-- [Terms & Conditions](#terms)
+- [Terms & Conditions](#terms--conditions)
 - [License](#license)
 
 ## Getting Started
