@@ -17,7 +17,6 @@ ib.filters()
         console.log(filters.categories[0]);
         console.log(filters.platforms[0]);
         console.log(filters.accepting[0]);
-        console.log(filters.trading[0]);
         console.log(filters.countries[0]);
     })
     .catch((e) => {

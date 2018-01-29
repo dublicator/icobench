@@ -105,15 +105,6 @@ export interface IIcoBenchFilters {
         name: string;
     }>;
     /**
-     * The list of all available trading exchanges.
-     */
-    trading: Array<{
-        /**
-         * The trading exchange name.
-         */
-        name: string;
-    }>;
-    /**
      * The list of all available countries.
      */
     countries: Array<{
