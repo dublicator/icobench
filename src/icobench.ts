@@ -26,7 +26,7 @@ export class IcoBench {
     }
 
     /**
-     * TReturns up to 12 ICOs per page with the amount of pages based on the search
+     * Returns up to 12 ICOs per page with the amount of pages based on the search
      * criteria and the filters provided. The response provides some basic information about the ICOs.
      */
     public async all(params: IIcoBenchFilterParams = {}): Promise<IIcoBenchResponse> {
